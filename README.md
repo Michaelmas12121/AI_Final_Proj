@@ -5,8 +5,8 @@ Shared repository for our team AI final project.
 
 ## Team
 
-- Michael
-- Andrew
-- Kevin
-
+- Michael Liu
+- Andrew Liu
+- Kevin Zhao
+- Michael Ma
 
