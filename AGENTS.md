@@ -1,6 +1,6 @@
 # Repository Agent Operating Rules
 
-> Version: 1.0  
+> Version: 1.1  
 > Applies to: every AI agent, automation, coding assistant, and subagent working in this repository  
 > Default delivery target: a tested, documented, ready-for-human-review Pull Request—not an unreviewed merge or production deployment
 
@@ -494,3 +494,21 @@ If these documented defaults differ from actual GitHub enforcement, report the g
 - Add nested `AGENTS.md` files only for real directory-specific commands or constraints. They may tighten local rules but must not weaken root safety boundaries.
 - When the same agent mistake recurs, perform a short retrospective and propose the smallest precise rule or automated gate that prevents recurrence.
 - Prefer mechanical enforcement—Rulesets, required checks, CODEOWNERS, Environment protection, secret scanning—over relying only on prose.
+
+---
+
+## 23. Mandatory Godot collaboration policy
+
+For every task involving Godot project creation or modification, an agent MUST read `GODOT_COLLABORATION.md` completely before planning, editing, moving resources, resolving conflicts, validating, exporting, or publishing changes.
+
+A task is Godot-related if it touches or proposes to touch any of the following:
+
+- `project.godot`;
+- `.gd`, `.tscn`, `.tres`, `.res`, `.uid`, shader, tile, theme, animation, localization, or import-related files;
+- Godot assets, resource paths, project settings, input actions, autoloads, audio buses, save data, addons, tests, or export presets;
+- engine version, renderer, target platform, scene architecture, or Godot repository layout.
+
+`GODOT_COLLABORATION.md` is mandatory operational policy under this root file. It may tighten Godot-specific collaboration and validation rules but cannot weaken this file's safety, authorization, GitHub delivery, human-review, security, or destructive-action requirements.
+
+If the Godot policy is missing, unreadable, or materially inconsistent with the actual project, stop before risky shared-file work, report the exact gap, and request or propose a dedicated policy repair.
+
