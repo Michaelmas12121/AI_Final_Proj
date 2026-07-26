@@ -1,0 +1,16 @@
+.godot/
+*.translation
+
+/builds/
+/artifacts/
+/screenshots/
+docs/screenshots/*.png.import
+
+*.log
+crash*.txt
+*.tmp
+
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
