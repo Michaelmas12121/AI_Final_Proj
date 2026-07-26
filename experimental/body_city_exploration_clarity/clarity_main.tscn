@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource path="res://experimental/body_city_exploration_clarity/clarity_main.gd" type="Script" id="1_main"]
+[ext_resource path="res://experimental/body_city_exploration_clarity/clarity_model.gd" type="Script" id="2_model"]
+[ext_resource path="res://experimental/body_city_exploration_clarity/clarity_world.gd" type="Script" id="3_world"]
+[ext_resource path="res://experimental/body_city_exploration/maintenance_worker.gd" type="Script" id="4_worker"]
+[ext_resource path="res://experimental/body_city_exploration_clarity/clarity_hud.gd" type="Script" id="5_hud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_worker"]
+size = Vector2(12, 12)
+
+[node name="BodyCityExplorationClarityPass" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="ClarityModel" type="Node" parent="."]
+script = ExtResource("2_model")
+
+[node name="CityWorld" type="Node2D" parent="."]
+script = ExtResource("3_world")
+
+[node name="MaintenanceWorker" type="CharacterBody2D" parent="."]
+position = Vector2(195, 292)
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("4_worker")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaintenanceWorker"]
+shape = SubResource("RectangleShape_worker")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(195, 292)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("5_hud")
